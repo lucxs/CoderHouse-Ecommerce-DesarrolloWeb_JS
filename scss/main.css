@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(46, 45, 44);
+  font-family: "Michroma", sans-serif;
+  color: aliceblue;
+}
+
+.header {
+  padding: 15px;
+  color: aliceblue;
+  align-items: baseline;
+}
+.header__content a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.header__menu {
+  width: 50%;
+  font-size: 1rem;
+}
+.header__menu, .header ul, .header li {
+  display: flex;
+  justify-content: space-around;
+}
+.header__menu img {
+  height: 20px;
+}
+
+.carousel-item {
+  height: 80vh;
+}
+
+.imgCentrada {
+  height: 80vh;
+  width: 100vw;
+  object-fit: cover;
+}

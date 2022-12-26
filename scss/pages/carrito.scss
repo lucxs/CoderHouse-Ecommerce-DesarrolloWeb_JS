@@ -1,0 +1,260 @@
+.carrito{
+    display: grid;
+    grid-template-columns: repeat(1, 90vw);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: 
+    "h2"
+    "h3"
+    "productos"
+    "img"
+    "subtotal"
+    "boton2"
+    "boton1";
+    justify-content: center;
+
+    @for $i from 2 to 4{
+        &__titulo#{$i} {
+
+            margin-bottom: 20px;
+            text-align: center;
+            grid-area:h#{$i};
+        }
+        
+    }
+
+    
+    &__contenedor__prod{
+        grid-area: productos;
+        @for $i from 1 to 5 
+        {
+            &__card#{$i}{
+                display: flex;
+                margin-top:15px ;
+              flex-direction: column;
+              align-items: center;
+    
+            }
+        }
+        @for $i from 1 to 5 {
+            &__card#{$i}Img{
+                width: 45vw;
+                height: 35vh;
+                border-radius: 3%;
+                object-fit: cover;
+                box-shadow: $ShadowsCarrito;
+            }
+        }
+        
+       
+    }
+
+    &__subtotal{
+        width: auto;
+        background-color:$BackgroundColorSubtotal;
+        padding: 10px;
+        border-radius: 3%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "p1 precio1"
+        "p2 precio2"
+        "p3 precio3";
+        grid-area: subtotal;
+        font-size: 0.5rem;
+        box-shadow: $ShadowsCarrito;
+        
+        @for $i from 1 to 4 {
+            &__p#{$i}{
+                grid-area: p#{$i};
+                background-color:$BackgroundColorSubtotal;
+            }
+        }
+
+        @for $i from 1 to 4 {
+            &__precio#{$i}{
+                grid-area: precio#{$i};
+                justify-self: end;
+
+                background-color:$BackgroundColorSubtotal;
+            }
+        }
+        
+    }
+
+    &__img{
+        grid-area: img;
+        width: 60vw;
+        margin-bottom: 30px;
+        border-radius: 3%;
+        justify-self: center;
+        box-shadow: $ShadowsCarrito;
+    }
+
+
+
+    &__boton1 {
+
+        text-decoration: none;
+        text-align: center;
+        color: aliceblue;
+        border: solid 2px;
+        border-radius: 10%;
+        padding: 10px;
+        transition-property: background-color;
+        transition-duration: 2s;
+        margin: 10px;
+        font-size: 0.8rem;
+        width: 50vw;
+        justify-self: center;
+        grid-area: boton1;
+
+        &:hover{
+                color: aliceblue;
+                background-color: rgb(5, 5, 26);
+        }
+    }
+
+    &__boton2 {
+        text-decoration: none;
+        text-align: center;
+        color: aliceblue;
+        border: solid 2px;
+        border-radius: 10%;
+        padding: 10px;
+        transition-property: background-color;
+        transition-duration: 2s;
+        margin: 10px;
+        font-size: 0.8rem;
+        width: 50vw;
+        justify-self: center;
+        grid-area: boton2;
+        &:hover{
+            color: aliceblue;
+            background-color: rgb(5, 5, 26);
+        }
+
+    }
+
+    @include mobile768
+    {
+        &__contenedor__prod
+        {
+            @for $i from 1 to 5 {
+                &__card#{$i}Img{
+                    width: 400px;
+                    height: 200px;
+                }
+            }
+        }
+
+        &__img{
+            grid-area: img;
+            width: 350px;
+            margin-top: 25px;
+        }
+
+        &__subtotal{
+            width: 450px;
+            justify-self: center;
+        }
+
+        &__boton1{
+            width: 250px;
+        }
+        &__boton2{
+            width: 250px;
+        }
+    }
+
+    @include desk1200{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas: 
+        "h2 h2"
+        "h3 h3"
+        "productos subtotal"
+        "productos boton2"
+        "productos img"
+        "boton1  boton1"
+        ;
+
+    
+            &__titulo1 {
+                
+                grid-area:h2;
+            }
+            &__titulo2 {
+                
+                grid-area:h3;
+            }
+            
+
+        &__contenedor__prod{
+            grid-area: productos;
+            @for $i from 1 to 5 {
+                &__card#{$i}{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    margin-top: 50px;
+                    box-shadow: $ShadowsCarrito;
+                }
+                
+            }
+            
+            @for $i from 1 to 5 {
+                &__card#{$i}Img{
+                    width: 10vw;
+                     height: 10vh;
+                }
+            }
+            
+           
+        }
+
+        &__subtotal{
+            grid-area: subtotal;
+            font-size: 0.7rem;
+            width:30vw ;
+            height: 40vh; 
+           margin-top: 60px;  
+           margin-left: 20px; 
+           box-shadow: $ShadowsCarrito;
+        }
+
+        &__img{
+            grid-area: img;
+            width: 30vw;
+            margin-left: 20px;
+            margin-top: 65px;
+            box-shadow: $ShadowsCarrito;
+        }
+
+
+
+            &__boton1
+             {
+                grid-area: boton1;
+                margin: 10px;
+                margin-left: 150px;
+                font-size: 1rem;
+                width: 35vw;
+                justify-self: start;
+                box-shadow: $ShadowsCarrito;
+            }
+
+            &__boton2
+             {
+                grid-area: boton2;
+                font-size: 1rem;
+                width: 25vw;
+                align-self: center;
+                margin-left: 26px;
+                box-shadow: $ShadowsCarrito;
+            }
+        
+    }
+}

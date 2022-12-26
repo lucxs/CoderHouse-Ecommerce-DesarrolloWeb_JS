@@ -1,0 +1,37 @@
+@mixin FontSize($valor1, $valor2) {
+    font-size: $valor1;
+    padding: $valor2;
+}
+
+@mixin mobile768{
+    @media(min-width:768px){
+       @content
+}
+};
+
+@mixin desk1200{
+   @media(min-width:1200px){
+       @content
+   }
+};
+
+@mixin HoversInternos {
+    transition-property: background-color;
+    transition-duration: 2s;
+    &:hover
+    {
+        background-color: $BackGroundCardHover
+    }
+}
+
+@mixin HoverArticulo($ok: false) 
+{
+    @if $ok == true 
+    {
+        @include HoversInternos();
+        
+    }
+    
+}
+
+

@@ -1,0 +1,215 @@
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(1, 100vw);
+    grid-template-rows: repeat(4,auto);
+    grid-template-areas:
+    "h2"
+    "prod1"
+    "prod2"
+    "prod3"
+    "btnVerMas"
+    "iframe";
+    justify-items: center;
+    align-items: center;
+    justify-content: baseline;
+
+    &__titulo{
+        margin: 16px;
+    grid-area: h2;
+    }
+
+    &__articulo{
+        display: inline-block;
+    border: 3px solid rgba(75, 73, 76, 0.174);
+    margin: 16px;
+    padding: 16px;
+    text-align: center;
+    width: 370px;
+    height:450px ;
+    background: $BackGroundCard;
+    transition-property: background-color;
+        transition-duration: 1s;
+        &:hover{
+            background: $BackGroundCardHover
+        }
+
+    }
+
+    &__h3{
+        padding-bottom: 16px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+        //Incluyendo mixin
+     &__descripcion{
+         @include FontSize(0.8rem, 16px);
+         background-color: rgba(0, 0, 0, 0);
+     }
+
+     &__precio{
+         @include FontSize(0.8rem, 0);
+         padding-bottom: 16px;
+         background-color: rgba(0, 0, 0, 0);
+     }
+
+    &__img{
+        width: 150px;
+    border-radius: 3%;
+    }
+
+    &__button {
+        border-color: rgb(237, 224, 224);
+        border-radius: 10%;
+        transition-property: background-color;
+        transition-duration: 2s;
+        @include FontSize(0.8rem, 16px);
+        &:hover{
+            background-color: rgb(5, 5, 26);
+            padding: 20px;
+        }
+    }
+
+    &__verMas {
+        margin: 40px;
+        grid-area: btnVerMas;
+    }
+
+    &__verMas__btn {
+        border: solid 1px rgb(237, 224, 224);
+        border-radius: 10%;
+        text-decoration: none;
+        color: aliceblue;
+        transition-property: background-color;
+        transition-duration: 2s;
+        @include FontSize(0.8rem, 16px);
+
+        &:hover{
+            background-color: rgb(5, 5, 26);
+            text-decoration: none;
+            color: aliceblue;
+        
+        }
+    }
+
+    &__verMas, &__verMas__btn a{
+
+        color: aliceblue;
+    text-decoration: none;
+    font-family: 'Michroma', sans-serif;
+    }
+
+    .iframe {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    
+        &__class{
+    
+            width: 80vw;
+            height: 70vh;
+        }
+    }
+
+     @include mobile768{
+
+         &__descripcion {
+             @include FontSize(1rem, 16px);
+        }
+        &__precio {
+            @include FontSize(1rem, 16px);
+        }
+
+        &__button {
+            font-size: 1rem;
+        }
+
+        &__verMas__btn {
+
+            font-size: 1rem;
+        }
+
+        &__articulo{
+            width: 420px;
+            height: 500px;
+        }
+
+        &__img{
+            width: 200px;
+        }
+
+     }
+
+     @include desk1200{
+
+        display: grid;
+        grid-template-columns: repeat(3, 33.3vw);
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas:
+        "h2 h2 h2"
+        "prod1 prod2 prod3"
+        "btnVerMas btnVerMas btnVerMas"
+        "iframe iframe iframe";
+        justify-items: center;
+        align-items: center;
+        justify-content: baseline;
+
+        &__articulo {
+            display: inline-block;
+            border: 3px solid rgba(75, 73, 76, 0.174);
+            margin: 16px;
+            padding: 16px;
+            text-align: center;
+            width: 30vw;
+            height: 550px;
+        }
+
+        &__descripcion {
+            font-size: 1rem;
+        }
+
+        &__precio {
+            font-size: 1rem;
+        }
+
+        &__img {
+            width: 200px;
+            border-radius: 3%;
+            object-fit:cover;
+        }
+
+        &____button {
+            font-size: 1rem;
+        }
+
+        &__verMas {
+
+            grid-area: btnVerMas;
+            justify-self: end;
+        }
+
+        &__verMas__btn {
+
+            font-size: 1rem;
+        }
+
+        .iframe {
+            padding-top: 16px;
+            padding-bottom: 16px;
+            justify-self: center;
+            grid-area: iframe;
+        }
+    
+        .iframe__class{
+    
+    
+            width: 80vw;
+            height: 70vh;
+    
+    
+        }
+
+     }
+
+}
+
+
+ 

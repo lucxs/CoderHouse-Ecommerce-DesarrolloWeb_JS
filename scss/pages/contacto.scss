@@ -1,0 +1,181 @@
+.contenedor_contacto{
+    display: grid;
+    grid-template-columns: repeat(1, 90%);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "h2"
+    "card"
+    "form";
+    align-items: center;
+    justify-content: center;
+
+    &__titulo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        grid-area: h2;
+    }
+        .form-contacto
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            grid-area: form;
+        }
+        .form__label,
+        .form__input,
+        .form__textarea
+         {
+            margin: 10px auto 10px 50px;
+            border-radius: 4%;
+            font-size: 0.8rem;
+            justify-self: center;
+            padding: 10px;
+        }
+
+        .form__input__boton {
+
+            margin: 10px;
+            padding: 16px;
+            border-radius: 10%;
+            border-color: rgb(237, 224, 224);;
+            transition-property: background-color;
+            transition-duration: 2s;
+            align-self: center;
+            font-size: 0.8rem;
+        }
+
+        .form__input__boton:hover {
+
+            background-color: rgb(5, 5, 26);
+            ;
+        }
+
+        .contacto__card1{
+            grid-area: card;
+            width: 75vw;
+            height: 75vh;
+            justify-self: center;
+            align-self: center;
+            background: $BackGroundCard  ;
+            border-radius: 8%;
+        }
+
+        .contacto__card__img{
+
+            width: 90%;
+            height: 60%;
+            border-radius: 2%;
+            background: $BackGroundCard  ;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        h3{
+            margin: 10px;
+            background: $BackGroundCard  ;
+        }
+
+        .contacto__p{
+
+            margin: 20px;
+            font-size: 0.8rem;
+            background: $BackGroundCard  ;
+        }
+
+         @include mobile768{
+
+            .contacto__card1{
+                height: auto;
+                border-radius: 5%;
+            }
+    
+            .contacto__card__img{
+    
+                width: 90%;
+                height: auto;
+                border-radius: 2%;
+                margin-top: 25px;
+                margin-left: 30px;
+            }
+    
+
+            h3{
+                padding: 10px;
+            }
+
+         }
+
+        @include desk1200{
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: repeat(2, auto);
+            grid-template-areas:
+            "h2 h2"
+            "form card";
+
+            &__titulo{
+                margin-bottom: 20px;
+                text-align: center;
+                grid-area: h2;
+
+                
+            }
+            .form__label,
+            .form__input,
+            .form__textarea 
+            {
+                margin: 15px auto 10px 50px;
+                border-radius: 4%;
+                font-size: 1rem;
+            }
+
+.form__input__boton {
+
+    margin-top: 10px;
+    margin-left: 50px;
+    padding: 16px;
+    border-radius: 10%;
+    transition-property: background-color;
+    transition-duration: 2s;
+    align-self: start;
+    font-size: 1rem;
+
+    &:hover {
+
+        background-color: rgb(5, 5, 26);
+        ;
+    }
+}
+
+.contacto__card1{
+
+    grid-area: card;
+    width: 45vw;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10%;
+
+}
+
+.contacto__card__img{
+
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+     margin-left: 30px;
+}
+
+h3{
+    margin: 10px;
+}
+
+.contacto__p{
+
+    margin: 30px;
+    font-size: 1rem;
+}
+        }
+}

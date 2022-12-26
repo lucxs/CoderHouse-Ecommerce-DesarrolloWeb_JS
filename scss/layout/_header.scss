@@ -1,0 +1,37 @@
+.header{
+    padding: 15px;
+    color: aliceblue;
+    align-items: baseline;
+    &__content a{
+        color: aliceblue;
+    text-decoration: none;
+    }
+    &__menu{
+        width: 50%;
+    font-size: 1rem;
+    }
+    &__menu, ul, li
+        {
+            display: flex;
+    justify-content: space-around;
+
+        } 
+        &__menu{
+            img{
+                height: 20px;
+            }
+        } 
+}
+//Seccion slider
+$height-80 : 80vh;
+.carousel-item {
+
+    height: $height-80;
+
+}
+
+.imgCentrada {
+    height: 80vh;
+    width: 100vw;
+    object-fit: cover;
+}

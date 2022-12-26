@@ -1,0 +1,14 @@
+.productos{
+
+    &__titulo__tienda {
+
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    @for $i from 1 to 7 {
+        .prod#{$i} h3,p{
+            background: rgba(0,0,0,0);
+        }
+    }
+}
