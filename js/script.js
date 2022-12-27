@@ -1,34 +1,37 @@
-//Evento disparador del btn producto 1
-btnprod1 = document.getElementById("prod1");
+//Evento disparador del btn producto 1, 2 y 3 - index.html
+let btnprod1 = document.getElementById("btnProd1");
+let btnprod2 = document.getElementById("btnProd2");
+let btnprod3 = document.getElementById("btnProd3");
 
-//nodo del prod1
-prod1 = document.getElementById("prod1");
+//nodo del prod1 -2 - 3
+let prod1 = document.getElementById("prod1");
+let prod2 = document.getElementById("prod2");
+let prod3 = document.getElementById("prod3")
 
+//Almacenando en storage
+localStorage.clear();
 
-addCarrito = document.getElementById("carrito");
-
-btnprod1.addEventListener("click", () =>{
-
-    let h3 = prod1.children[0].outerText;
-    let img = prod1.children[1].attributes[1].nodeValue;
-    let description = prod1.children[2].innerText;
-    let precio =prod1.children[3].innerText;
-
-    console.log(prod1);
-    console.log(h3," - ", img," - ", description," - ", precio);
-
-    let elemento = document.createElement("div");
-    elemento.innerHTML(`
-    <img src="../assets/img/productos/producto2.jpg" alt="Imagen lentes de sol" class="carrito__contenedor__prod__card1Img">
-                        <p class="productos__descripcion">
-                            Lentes de sol Tous polarizados111111
-                        </p>
-                        <p class="productos__precio">
-                            $10.000
-                        </p>
-    `);
-
-    addCarrito.append(elemento);
+//Evento disparador del btn producto 1, 2 y 3 - index.html
 
 
-} );
+let Btn1JsonFormat = JSON.stringify(btnprod1
+    );
+
+localStorage.setItem("btn1",Btn1JsonFormat);
+// localStorage.setItem("btn2",btnprod2  );
+// localStorage.setItem("btn3",btnprod3  );
+
+
+let prod1JsonFormat = JSON.stringify(document.getElementById("prod1"))
+//nodo del prod1 -2 - 3
+localStorage.setItem("prod1",prod1JsonFormat );
+// localStorage.setItem("prod2",prod2 );
+// localStorage.setItem("prod3",prod3 );
+ 
+ 
+
+
+let message = localStorage.getItem("btn1");
+
+console.log({message});
+

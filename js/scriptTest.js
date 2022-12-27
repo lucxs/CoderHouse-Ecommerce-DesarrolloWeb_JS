@@ -1,22 +1,23 @@
 //Evento disparador del btn producto 1, 2 y 3 - index.html
-let btnprod1 = document.getElementById("btnProd1");
-let btnprod2 = document.getElementById("btnProd2");
-let btnprod3 = document.getElementById("btnProd3");
-
-
-//Almacenando en storage
-
-localStorage.setItem("btn1", btnprod1);
-
-
+// let btnprod1 = document.getElementById("btnProd1");
+// let btnprod2 = document.getElementById("btnProd2");
+// let btnprod3 = document.getElementById("btnProd3");
 
 //nodo del prod1 -2 - 3
-let prod1 = document.getElementById("prod1");
-let prod2 = document.getElementById("prod2");
-let prod3 = document.getElementById("prod3")
+// let prod1 = document.getElementById("prod1");
+// let prod2 = document.getElementById("prod2");
+// let prod3 = document.getElementById("prod3")
+
+//Trayendo del Storage:
+let btnRecuperado = localStorage.getItem("btn1");
+let prod1Recuperado = localStorage.getItem("prod1")
+ let btnProd1 = JSON.parse(btnRecuperado);
+let prod1 = JSON.parse(prod1Recuperado);
+
+console.log(btnProd1)
 
 //Evento para botón
-btnprod1.addEventListener("click", () =>{
+     btnprod1.addEventListener("click", () =>{
 
     let img = prod1.children[1].attributes[0].nodeValue;
     let imgAlt = prod1.children[1].attributes[1].nodeValue;
@@ -29,13 +30,15 @@ btnprod1.addEventListener("click", () =>{
 
     let produ1 = new Producto(img, imgAlt, description, precio);
 
+    
+
  produ1.addingNode(); 
 
     
 } );
 
 //Evento para botón
-btnprod2.addEventListener("click", () =>{
+/*btnprod2.addEventListener("click", () =>{
 
     let img = prod2.children[1].attributes[0].nodeValue;
     let imgAlt = prod2.children[1].attributes[1].nodeValue;
@@ -61,7 +64,7 @@ btnprod3.addEventListener("click", () =>{
         produ3.addingNode(); 
 
     
-} );
+} );*/
 
 
 class Producto {
@@ -89,6 +92,7 @@ class Producto {
     `;
     
     document.getElementById("carro1234").append(elemento);
+
 
     }
 }
