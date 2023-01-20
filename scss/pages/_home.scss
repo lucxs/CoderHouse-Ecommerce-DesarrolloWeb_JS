@@ -36,6 +36,24 @@
 
     }
 
+    @keyframes anim{
+        0% {background-color:rgb(5, 5, 26)}
+       25% {background-color: rgb(21, 101, 64);} 
+    }
+
+    &__Altercard {
+        display: inline-block;
+        border: 3px solid rgba(75, 73, 76, 0.174);
+        margin: 16px;
+        padding: 16px;
+        text-align: center;
+        width: 370px;
+        height:550px ;
+        animation-name: anim;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+
     &__h3{
         padding-bottom: 16px;
         background-color: rgba(0, 0, 0, 0);
@@ -46,7 +64,7 @@
          background-color: rgba(0, 0, 0, 0);
      }
 
-     &__precio{
+     &__precio, span{
          @include FontSize(0.8rem, 0);
          padding-bottom: 16px;
          background-color: rgba(0, 0, 0, 0);
@@ -66,6 +84,18 @@
         &:hover{
             background-color: rgb(5, 5, 26);
             padding: 20px;
+        }
+    }
+
+    &__buttonRemove{
+        padding: 9px;
+        border-radius: 15%;
+        transition-property: background-color;
+        transition-duration: 1s;
+        @include FontSize(0.8rem, 16px);
+        &:hover{
+            background-color: rgb(5, 5, 26);
+            
         }
     }
 
@@ -207,7 +237,11 @@
     
         }
 
+
+
      }
+
+     
 
 }
 

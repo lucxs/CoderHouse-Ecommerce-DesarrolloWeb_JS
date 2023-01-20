@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Lentes de sol",
+        "description": "Lentes de sol Oakley Anti reflex",
+        "price": 10580,
+        "img": "/assets/img/productos/producto1.jpg"
+    },
+
+    {
+        "id": 2,
+        "name": "Lentes de sol",
+        "description":"Lentes de sol Tous polarizados",
+        "price": 15500,
+        "img": "/assets/img/productos/producto2.jpg"
+    },
+
+    {
+        "id": 3,
+        "name": "Lentes de sol",
+        "description": "Lentes de sol Ray-ban polarizados",
+        "price": 40200,
+        "img": "/assets/img/productos/producto3.jpg"
+    },
+
+    {
+        "id": 4,
+        "name": "Lentes de sol",
+        "description": " Lentes de sol Versace polarizados",
+        "price": 24800,
+        "img": "/assets/img/productos/producto4.jpg"
+    },
+
+    {
+        "id": 5,
+        "name": "Lentes de sol",
+        "description": "Lentes de sol Gucci",
+        "price": 29555,
+        "img": "/assets/img/productos/producto5.jpg"
+    },
+
+    {
+        "id": 6,
+        "name": "Lentes de sol",
+        "description": "Lentes de sol Prada espejados",
+        "price": 34822,
+        "img": "/assets/img/productos/producto6.jpg"
+    }
+
+]
