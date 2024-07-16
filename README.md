@@ -4,18 +4,22 @@
 
 ### Cuenta con las siguientes secciones:
 
-* Sección de bienvenida
-* Catalogo que nos redirecciona hacia todo el stock de productos donde cada unonos redirije hacia un completo detalle del producto permitiendonos agregar el mismo al carrito de compras.
-* Menú desplegable con un filtro de productos por marca.
-* Carrito de compras para realizar la transaccion final de la compra asignando un ID unico para futuras referencias de compra.
+* Sección HOME QUE CUENTA CON:
+    - con un carrusel de bootstrap.
+    - un adelanto de los productos en el stock de ventas, con un botón "VER     MÁS" que nos redirecciona a la sección TIENDA.
+    - Un Iframe de youtube como video publicitario.
+* Sección TIENDA con el stock de todos los productos.
+* Sección SUCURSALES con la ubicación de los locales de la empresa.
+* Sección CONTACTO donde podes comunicarte con via E-MAIL y dejar4 todas tus dudas.
+* Carrito de compras para realizar la transaccion final de la compra.
 * En este proyecto se utiliza:
-    - react-Router-Dom-npm
-    - Para la base de datos: Firebase
-    - Biblioteca de Chakra UI para implemetar el diseño del sitio
+    - HTML5
+    - CSS3
+    - BOOTSTRAP
     
 
 >#### Linkedin : https://www.linkedin.com/in/lucas-lioi-6abb2a15b/  
 
----"homepage": "https://optica-ecommerce.vercel.app/#/",
+---"homepage": "https://coder-house-ecommerce-desarrollo-web-js.vercel.app/index.html",
 
-![Guia del sitio](./src/assets/img/mirage.gif)
+![Guia del sitio](./assets/mirageGif.gif)
